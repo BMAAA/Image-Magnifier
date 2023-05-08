@@ -22,12 +22,11 @@ for images in list(filter(lambda i: i.endswith(".png") or i.endswith(".jpg") or 
                           os.listdir(folder_dir))):
     # working with image
     im = Image.open(folder_dir + "/" + images)
-    data = im.getdata()
     x, y = im.size
     n = get_mult(x, y, x_need, y_need)
-    newdata = []
     im1 = Image.new('RGBA', (int(x) * n, int(y) * n), (255, 255, 255, 0))
-    pixels, pixels1 = im.load(), ImageDraw.Draw(im)
+    data = im.getdata()
+    newdata = []
     for i in range(y):
         for _ in range(n):
             for j in range(x):
