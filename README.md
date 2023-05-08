@@ -8,3 +8,8 @@ To get started, just put the images that you need to enlarge in the "Input image
 Image Magnifier - это небольшой код, который позволяет увеличивать изображение без потери качества независимо от размера изображения
 
 Для начала просто поместите изображения, которые вам нужно увеличить, в папку "Input images" и запустите код, введя минимальные размеры изображений, разделенные пробелом (то есть, если вы хотите, чтобы минимальные размеры изображений были 600x400, то введите 600 400). Затем дождитесь завершения работы программы, и вы найдете полученные изображения в папке "Output images".
+
+## Contack
+
+This code was created specifically for SKPRuWiki and SKPEnWiki. 
+For communication, write on the wall on fandom, nickname: Bratmatras1
