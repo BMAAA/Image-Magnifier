@@ -2,14 +2,6 @@ import os
 from PIL import Image, ImageDraw
 from os import listdir
 
-
-def get_mult(x, y, x1, y1):  # x, y - size of the original image; x1, y1 - minimum required image size
-    n = 1
-    while x * n < x1 or y * n < y1:
-        n += 1
-    return n
-
-
 x_need, y_need = [int(i) for i in input().split()]
 # get files from
 folder_dir = "Input images"
@@ -23,7 +15,8 @@ for images in list(filter(lambda i: i.endswith(".png") or i.endswith(".jpg") or 
     # working with image
     im = Image.open(folder_dir + "/" + images)
     x, y = im.size
-    n = get_mult(x, y, x_need, y_need)
+    n = get_mult(x, y, , y_need)
+    n = min(x_need // x, y_need // y)
     im1 = Image.new('RGBA', (int(x) * n, int(y) * n), (255, 255, 255, 0))
     data = im.getdata()
     newdata = []
